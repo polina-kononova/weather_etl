@@ -24,8 +24,6 @@ def fetch_weather_data(latitude, longitude, start_date, end_date):
     response = requests.get(base_url, params=params)
     if response.status_code == 200:
         data = response.json()
-
-        # Создаем папку для raw данных, если не существует
         raw_data_dir = "data/raw"
         os.makedirs(raw_data_dir, exist_ok=True)
 
@@ -41,11 +39,4 @@ def fetch_weather_data(latitude, longitude, start_date, end_date):
     else:
         raise Exception(f"Ошибка при запросе: HTTP {response.status_code} - {response.text}")
 
-# Пример вызова
-if __name__ == "__main__":
-    lat = 55.0344
-    lon = 82.9434
-    start = "2025-05-16"
-    end = "2025-05-30"
-    weather_json = fetch_weather_data(lat, lon, start, end)
-    print("Получены данные:", len(weather_json))
+

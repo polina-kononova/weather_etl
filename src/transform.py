@@ -1,13 +1,11 @@
 import pandas as pd
 from datetime import datetime
 
-# Вспомогательные функции конвертации
 def fahrenheit_to_celsius(f_temp):
     """Конвертация °F в °C"""
     return (f_temp - 32) * 5/9
 
 def unix_to_iso(unix_time):
-    """Преобразование Unix времени в ISO 8601"""
     return datetime.utcfromtimestamp(unix_time).isoformat() + 'Z'
 
 # Основная функция трансформации
