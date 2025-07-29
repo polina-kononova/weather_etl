@@ -6,15 +6,11 @@
 
 ## Установка зависимостей
 
-bash
+``make install``
 
-``pip install -r requirements.txt``
+## Запуск
 
-Запуск с помощью Docker
-
-bash
-
-``docker-compose up --build``
+``make run``
 
 
 ## Входные данные
