@@ -4,7 +4,7 @@ install:
 	pip install -r requirements.txt
 
 test:
-	pytest tests/
+	python3 -m unittest src/test.py
 
 run:
 	python3 src/main.py
